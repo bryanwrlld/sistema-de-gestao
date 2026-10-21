@@ -15,8 +15,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "tsx watch --include ./**/* ./src/index.ts"
+    "start": "tsx watch --include ./**/* ./src/index.ts",
+    "dev": "tsx watch --include ./**/* ./src/index.ts",
+    "seed": "tsx ./prisma/seed.ts",
+    "db:migrate": "prisma migrate deploy"
   },
   "dependencies": {
     "@prisma/adapter-better-sqlite3": "^7.10.0",
